@@ -1,0 +1,70 @@
+body {
+    margin:50px;
+}
+
+body::after { /*applies to the body AFTER the display of the body*/
+    
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT66Bfo45Ummnqo9iffOZaNPUWboSc1sfUDYR1B522agmqxteec&usqp=CAU");
+    background-repeat: no-repeat;
+    background-attachment : fixed;
+    background-size: cover; 
+    opacity: 0.8;/*enables lighter background image, allowing more readable text, in the front layer*/
+    /*paramaters enabling the display of the background image*/
+    content: "";/*empty the content before adding the background image*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;   
+  }
+
+input:hover { /* give the 'width' property when pointer over the object that has no width property setted*/
+    width: 250px;
+}
+hr.separation {
+    size : 1px;
+    width : 100% ;
+    color:rgb(192, 186, 186);
+    align-content: center;
+}
+
+.animate__animated.animate__bounce.animate__repeat-1 {
+    --animate-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+ input.evolutiveColor {
+    background-color: rgb(255, 0, 0);
+    animation-name: colorEvolution;
+    animation-delay: 1.5s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes colorEvolution {
+    from {background-color: rgb(255, 0, 212);}
+    to {background-color: rgb(122, 241, 10);}
+  }
+ 
+.blinking {
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.5, 0, 1, 1);
+    animation-duration: 0.5s;
+  }
+
+
+@-webkit-keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+
+p.image-commit-push {
+    margin-left:150px;
+}
+
+.example {
+    background-color: rgb(234, 234, 245);
+}
+
